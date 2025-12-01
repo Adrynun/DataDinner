@@ -45,4 +45,8 @@ public class ProductoController {
     public void deleteProducto(@PathVariable int id) {
         productoService.deleteProducto(id);
     }
+    @GetMapping("/categoria/{categoriaId}")
+    public List<Producto> getProductosByCategoriaId(@PathVariable int categoriaId) {
+        return productoService.getProductosByCategoriaId(categoriaId);
+    }
 }

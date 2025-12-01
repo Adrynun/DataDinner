@@ -43,4 +43,15 @@ public class UsuarioService {
         Usuario existing = getUsuarioById(id);
         usuarioRepository.delete(existing);
     }
+
+    public Usuario authenticate(String nombreUsuario, String pin) {
+        Usuario usuario = usuarioRepository.findByNombreUsuario(nombreUsuario)
+                .orElseThrow(() -> new RuntimeException("Usuario no encontrado: " + nombreUsuario));
+
+        if (usuario.getPass().equals(pin)) {
+            return usuario;
+        } else {
+            throw new RuntimeException("PIN incorrecto.");
+        }
+    }
 }
