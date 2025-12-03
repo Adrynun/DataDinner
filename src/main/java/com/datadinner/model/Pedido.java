@@ -45,7 +45,7 @@ public class Pedido {
 	private List<PedidoProducto> productos = new ArrayList<>();
 
 	public enum Estado {
-		EN_PREPARACION, SERVIDO, CERRADO
+		EN_PREPARACION, SERVIDO, CERRADO, PENDIENTE
 	}
 
 	public Pedido() {
