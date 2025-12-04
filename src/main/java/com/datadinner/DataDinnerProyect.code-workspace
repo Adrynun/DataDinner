@@ -5,7 +5,12 @@
 		},
 		{
 			"path": "../../../../.."
+		},
+		{
+			"path": "../../../../../../../DataDinner_Backend"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"java.configuration.updateBuildConfiguration": "interactive"
+	}
 }
